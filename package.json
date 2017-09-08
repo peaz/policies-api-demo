@@ -1,0 +1,23 @@
+{
+  "name": "policies-api",
+  "version": "1.0.0",
+  "description": "Travel insurance Policies api",
+  "main": "policies-api.js",
+  "license": "Apache-2.0",
+  "keywords": [
+    "travel",
+    "insurance",
+    "policies",
+    "api"
+  ],
+  "author": "Ken Ng",
+  "dependencies": {
+    "express": "*",
+    "body-parser": "*",
+    "https": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}
