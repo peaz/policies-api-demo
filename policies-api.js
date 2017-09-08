@@ -10,8 +10,16 @@ app.use(bodyParser.json());
 app.get('/policies/:userId', function(req, res) {
 
   getPolicies(req.params.userId, (apiResponse) => {
+    console.log(apiResponse.length);
+    var payload = new Object();
+    payload = [];
+    for (var i=0; i<apiResponse.length; i++ ) {
+      payload.push({"policyNo":apiResponse[i].policyid,"price":apiResponse[i].price});
+    }
     console.log("received: " + JSON.stringify(apiResponse));
-    res.send(apiResponse);
+    console.log("payload: " + JSON.stringify(payload));
+
+    res.send(payload);
   })
 });
 
@@ -21,7 +29,7 @@ console.log('The server is running!');
 
 
 function getPolicies(userId, callback) {
-  var qlStr = "select%20*%20where%20userId%20=%20'" + userId + "'";
+  var qlStr = "select%20policyId,price%20where%20userId%20=%20'" + userId + "'";
   var options = {
     host: 'apibaas-trial.apigee.net',
     port: 443,
