@@ -6,6 +6,8 @@ var https = require('https');
 
 var app = express();
 app.use(bodyParser.json());
+app.use(express.static('public'));
+//app.get('/', express.static(__dirname + '/public'));
 
 app.get('/policies/:userId', function(req, res) {
 
