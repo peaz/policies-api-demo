@@ -70,7 +70,7 @@ console.log('The server is running!');
 
 
 function getPolicies(userId, callback) {
-  var qlStr = "select%20policyId,price%20where%20userId%20=%20'" + userId + "'";
+  var qlStr = "select%20*%20where%20userId%20=%20'" + userId + "'";
   var options = {
     host: 'apibaas-trial.apigee.net',
     port: 443,
