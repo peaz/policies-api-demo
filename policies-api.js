@@ -57,9 +57,9 @@ app.post('/policies', function(req, res) {
       "userId" : apiResponse.entities[0].userId
     };
     console.log("received: " + JSON.stringify(apiResponse));
-    console.log("resPayload: " + JSON.stringify(payload));
+    console.log("resPayload: " + JSON.stringify(resPayload));
 
-    res.send(payload);
+    res.send(resPayload);
   })
 });
 
