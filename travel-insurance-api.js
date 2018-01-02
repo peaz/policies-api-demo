@@ -25,7 +25,7 @@ function getPolicies(userId, callback) {
   var options = {
     host: 'apibaas-trial.apigee.net',
     port: 443,
-    path: '/kentrial/sandbox/policies?ql=' + qlStr,
+    path: '/kenyc/sandbox/policies?ql=' + qlStr,
     method: 'GET'
   };
   var req = https.request(options, res => {
